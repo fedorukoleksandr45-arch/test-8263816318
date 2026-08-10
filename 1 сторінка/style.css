@@ -1,0 +1,208 @@
+:root {
+    --bg-light: #f8fafc;
+    --card-bg: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --accent-blue: #2563eb;
+    --accent-dark: #1e293b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.logo span {
+    color: var(--accent-blue);
+}
+
+.menu-links .nav-btn {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-left: 20px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-links .nav-btn.active, .menu-links .nav-btn:hover {
+    background-color: var(--accent-dark);
+    color: white;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.car-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.car-card.active-card {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
+}
+
+.car-img-box {
+    background-color: #cbd5e1;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.car-details {
+    padding: 20px;
+}
+
+.car-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--accent-blue);
+    margin: 10px 0;
+}
+
+.select-btn, .action-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.select-btn {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+}
+
+.select-btn:hover {
+    background-color: #e2e8f0;
+}
+
+.car-card.active-card .select-btn {
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+.calculator-section {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+.calc-card, .results-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.status-text {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--bg-light);
+}
+
+input[readonly] {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.highlight-text {
+    color: var(--accent-blue);
+    font-size: 20px;
+}
+
+.action-btn {
+    background-color: var(--accent-dark);
+    color: white;
+    margin-top: 15px;
+}

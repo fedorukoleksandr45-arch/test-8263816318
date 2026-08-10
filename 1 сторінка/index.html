@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveFinance — Каталог та Калькулятор Лізингу</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Drive<span>Finance</span></div>
+        <div class="menu-links">
+            <a href="index.html" class="nav-btn active">Каталог та Калькулятор</a>
+            <a href="dashboard.html" class="nav-btn">Мій Фінансовий Дашборд</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero-section">
+            <h1>Оберіть автомобіль та розрахуйте лізинг</h1>
+            <p>Інтерактивний фінансовий помічник для підбору автокредитів на основі макету Figma.</p>
+        </header>
+
+        <section class="catalog-section">
+            <h2>Доступні моделі з макету</h2>
+            <div class="car-grid">
+                
+                <div class="car-card" data-price="45000" data-name="Premium Sedan 2024">
+                    <div class="car-img-box">🚗 Premium Sedan</div>
+                    <div class="car-details">
+                        <h3>Premium Sedan 2024</h3>
+                        <p class="car-price">$45,000</p>
+                        <button class="select-btn">Обрати для розрахунку</button>
+                    </div>
+                </div>
+
+                <div class="car-card" data-price="65000" data-name="Electric SUV 2026">
+                    <div class="car-img-box">⚡ Electric SUV</div>
+                    <div class="car-details">
+                        <h3>Electric SUV 2026</h3>
+                        <p class="car-price">$65,000</p>
+                        <button class="select-btn">Обрати для розрахунку</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <div class="calc-card">
+                <h2>Фінансові умови лізингу</h2>
+                <p class="status-text">Обраний автомобіль: <strong id="active-car-name">Не обрано (клікніть на авто вище)</strong></p>
+                
+                <form id="calc-form">
+                    <div class="form-group">
+                        <label for="car-price">Повна вартість авто ($)</label>
+                        <input type="number" id="car-price" value="0" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="down-payment">Перший внесок ($)</label>
+                        <input type="number" id="down-payment" value="5000" min="1000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loan-term">Термін виплати</label>
+                        <select id="loan-term">
+                            <option value="12">12 місяців (Ставка 5%)</option>
+                            <option value="36">36 місяців (Ставка 8%)</option>
+                            <option value="60">60 місяців (Ставка 12%)</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div class="results-card">
+                <h2>Результат розрахунку</h2>
+                <div class="result-row">
+                    <span>Тіло кредиту:</span>
+                    <strong id="res-body">$0.00</strong>
+                </div>
+                <div class="result-row">
+                    <span>Щомісячний платіж:</span>
+                    <strong id="res-monthly" class="highlight-text">$0.00</strong>
+                </div>
+                <div class="result-row">
+                    <span>Сума переплати (відсотки):</span>
+                    <strong id="res-overpay">$0.00</strong>
+                </div>
+                <button id="save-btn" class="action-btn">Оформити та надіслати в дашборд</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
